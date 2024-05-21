@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Ethan</span><br>My Portfolio</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -----------------about--------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about (2).jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Ethan and I have a passion for tech including hardware and software. I have made multiple projects in this class and I am here to share them on my portfolio.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>UI</span><br>Able to make appealing interfaces</li>
+                            <li><span>Web Development</span><br>Able to make functional websites</li>
+                            <li><span>Cyber Security</span><br>Able to explain the functionality of cyber security</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>EarthDay</span><br>Recreated the earthday.org website</li>
+                            <li><span>RPG</span><br>Made a functional RPG style game</li>
+                            <li><span>Fitness Website</span><br>Made a Gym Membership website including a form to sign up</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>FreeCodeCamp</span><br>Completed multiple FreeCodeCamp courses teaching my the basic functionalities of HTML, CSS, and JavaScript</li>
+                            <li><span>CodeAcademy</span><br>Taught me how to make my websites responsive</li>
+                            <li><span>w3schools</span><br>The main source of how I learn what tags, functions, properties, etc. do.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------services------------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Portfolio</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Earth Day</h2>
+                    <p>The Earth Day page was a recreation of earthday.org commemorating earth day 2024. This project taught us how to recreate website using inspect element, box model, and more.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Photo Gallery</h2>
+                    <p>This was one of the most important projects because it taught us how to use the flexbox, which is one of the most important ways to position elements with CSS. This was also my second favorite project.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>RPG</h2>
+                    <p>The RPG taught us a load of JavaScript with how to use operators, assign variables, etc. This was my favorite project due to it being my own game I coded and was able to customize it myself.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Cafe Menu</h2>
+                    <p>This project taught us CSS for the first time and how to utilize it to make the website look nice. This project was the reason I got so good at designing websites in the first place such as this one.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+
+        let tablinks = document.getElementsByClassName("tab-links")
+        let tabcontents = document.getElementsByClassName("tab-contents")
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+</body>
+</html>
